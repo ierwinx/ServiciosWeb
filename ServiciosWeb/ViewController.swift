@@ -1,10 +1,3 @@
-//
-//  ViewController.swift
-//  ServiciosWeb
-//
-//  Created by Erwin on 20/05/21.
-//
-
 import Cocoa
 
 class ViewController: NSViewController {
@@ -12,12 +5,24 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        let headers = [
+            HeadersCon(value: "application/json", key: "Content-Type")
+        ]
+        
+        let servicio = BaseConection()
+        servicio.sendResponse(strUrl: "https://jsonplaceholder.typicode.com/albums", method: .GET, arrHeardes: headers) { (album: [Album]?, error) in
+            if error.code == 0 {
+                print(album!)
+            } else {
+                print(error)
+            }
+            
+        }
+        
     }
 
     override var representedObject: Any? {
         didSet {
-        // Update the view, if already loaded.
         }
     }
 
