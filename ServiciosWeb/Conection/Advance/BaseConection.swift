@@ -2,9 +2,9 @@ import Foundation
 
 class BaseConection {
     
-    private let ownError: NSError = NSError(domain: "BaseConection", code: -1, userInfo: nil)
+    private static let ownError: NSError = NSError(domain: "BaseConection", code: -1, userInfo: nil)
     
-    public func sendResponse<T: Decodable>(strUrl: String, method: MethodCon, arrHeardes: [HeadersCon]?, handler: @escaping (_ objResp: T?, NSError) -> ()) {
+    public static func sendResponse<E: Codable, T: Decodable>(strUrl: String, method: MethodCon, arrHeardes: [HeadersCon]? = [], objBody: E, handler: @escaping (_ objResp: T?, NSError) -> ()) {
         
         guard let endpoint: URL = URL(string: strUrl) else {
             return
@@ -18,11 +18,9 @@ class BaseConection {
         
         request.httpMethod = method.rawValue
         
-        /*guard let body = try? JSONEncoder().encode(objBody) else {
-            return
-        }*/
-
-        //request.httpBody = body
+        if !(objBody is EmptyObj), let body = try? JSONEncoder().encode(objBody) {
+            request.httpBody = body
+        }
         
         let tarea = URLSession.shared.dataTask(with: request) { data, response, error in
             DispatchQueue.main.sync {
@@ -45,7 +43,6 @@ class BaseConection {
     
 }
 
-
 struct HeadersCon {
     let value: String
     let key: String
@@ -63,7 +60,7 @@ enum MethodCon: String {
     case DELETE
 }
 
-struct EmptyObj: Encodable {
+struct EmptyObj: Encodable & Decodable {
     init() {
     }
 }

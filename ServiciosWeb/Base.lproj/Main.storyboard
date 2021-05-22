@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11134" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11134"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="18122"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -673,7 +674,7 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModuleProvider="target"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="ServiciosWeb" customModuleProvider="target"/>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -700,18 +701,189 @@
             </objects>
             <point key="canvasLocation" x="75" y="250"/>
         </scene>
-        <!--View Controller-->
+        <!--Servicios Web-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Servicios Web" id="XfG-lQ-9wD" customClass="ViewController" customModule="ServiciosWeb" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e34-Vk-Bn2">
+                                <rect key="frame" x="50" y="90" width="380" height="91"/>
+                                <subviews>
+                                    <stackView distribution="fillEqually" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SZI-wH-DJ9">
+                                        <rect key="frame" x="0.0" y="66" width="380" height="25"/>
+                                        <subviews>
+                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0qZ-Bn-ByJ">
+                                                <rect key="frame" x="-2" y="4" width="174" height="21"/>
+                                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" title="Servicio Simple : " id="t7S-cp-G9K">
+                                                    <font key="font" metaFont="system" size="18"/>
+                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                </textFieldCell>
+                                            </textField>
+                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="giJ-f5-muM">
+                                                <rect key="frame" x="176" y="0.0" width="173" height="25"/>
+                                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="-" id="ysE-Hu-OCl">
+                                                    <font key="font" metaFont="system" size="21"/>
+                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                </textFieldCell>
+                                            </textField>
+                                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PLG-bc-61K">
+                                                <rect key="frame" x="355" y="0.0" width="25" height="25"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="25" id="nCW-Is-4Zf"/>
+                                                    <constraint firstAttribute="width" constant="25" id="xiq-u2-70G"/>
+                                                </constraints>
+                                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSStatusNone" id="5dX-kQ-vVB"/>
+                                            </imageView>
+                                        </subviews>
+                                        <visibilityPriorities>
+                                            <integer value="1000"/>
+                                            <integer value="1000"/>
+                                            <integer value="1000"/>
+                                        </visibilityPriorities>
+                                        <customSpacing>
+                                            <real value="3.4028234663852886e+38"/>
+                                            <real value="3.4028234663852886e+38"/>
+                                            <real value="3.4028234663852886e+38"/>
+                                        </customSpacing>
+                                    </stackView>
+                                    <stackView distribution="fillEqually" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ycg-U5-Dep">
+                                        <rect key="frame" x="0.0" y="33" width="380" height="25"/>
+                                        <subviews>
+                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="6UG-7S-BLe">
+                                                <rect key="frame" x="-2" y="4" width="174" height="21"/>
+                                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" title="Servicio Intermedio : " id="wVB-1I-bXW">
+                                                    <font key="font" metaFont="system" size="18"/>
+                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                </textFieldCell>
+                                            </textField>
+                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="MKL-dJ-jyR">
+                                                <rect key="frame" x="176" y="0.0" width="173" height="25"/>
+                                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="-" id="ZmV-Rn-6HA">
+                                                    <font key="font" metaFont="system" size="21"/>
+                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                </textFieldCell>
+                                            </textField>
+                                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CdC-oQ-ifb">
+                                                <rect key="frame" x="355" y="0.0" width="25" height="25"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="25" id="IRA-fF-ndg"/>
+                                                    <constraint firstAttribute="height" constant="25" id="ufp-5e-sjl"/>
+                                                </constraints>
+                                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSStatusNone" id="vSN-4h-z3f"/>
+                                            </imageView>
+                                        </subviews>
+                                        <visibilityPriorities>
+                                            <integer value="1000"/>
+                                            <integer value="1000"/>
+                                            <integer value="1000"/>
+                                        </visibilityPriorities>
+                                        <customSpacing>
+                                            <real value="3.4028234663852886e+38"/>
+                                            <real value="3.4028234663852886e+38"/>
+                                            <real value="3.4028234663852886e+38"/>
+                                        </customSpacing>
+                                    </stackView>
+                                    <stackView distribution="fillEqually" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y92-Nv-VDg">
+                                        <rect key="frame" x="0.0" y="0.0" width="380" height="25"/>
+                                        <subviews>
+                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9Q1-JH-faa">
+                                                <rect key="frame" x="-2" y="4" width="174" height="21"/>
+                                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" title="Servicio Avanzado : " id="nq9-cn-hDC">
+                                                    <font key="font" metaFont="system" size="18"/>
+                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                </textFieldCell>
+                                            </textField>
+                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="kGS-fB-2lN">
+                                                <rect key="frame" x="176" y="0.0" width="173" height="25"/>
+                                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="-" id="OeJ-3o-i1L">
+                                                    <font key="font" metaFont="system" size="21"/>
+                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                </textFieldCell>
+                                            </textField>
+                                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dmn-Pv-LN2">
+                                                <rect key="frame" x="355" y="0.0" width="25" height="25"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="25" id="OKz-6d-X4G"/>
+                                                    <constraint firstAttribute="height" constant="25" id="QHE-Bn-7Wi"/>
+                                                </constraints>
+                                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSStatusNone" id="P3X-2E-Gvi"/>
+                                            </imageView>
+                                        </subviews>
+                                        <visibilityPriorities>
+                                            <integer value="1000"/>
+                                            <integer value="1000"/>
+                                            <integer value="1000"/>
+                                        </visibilityPriorities>
+                                        <customSpacing>
+                                            <real value="3.4028234663852886e+38"/>
+                                            <real value="3.4028234663852886e+38"/>
+                                            <real value="3.4028234663852886e+38"/>
+                                        </customSpacing>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="SZI-wH-DJ9" firstAttribute="top" secondItem="e34-Vk-Bn2" secondAttribute="top" id="2a7-9B-ZWx"/>
+                                    <constraint firstItem="Ycg-U5-Dep" firstAttribute="leading" secondItem="e34-Vk-Bn2" secondAttribute="leading" id="4Fr-u6-SOt"/>
+                                    <constraint firstAttribute="trailing" secondItem="y92-Nv-VDg" secondAttribute="trailing" id="Ucs-Yx-Ttj"/>
+                                    <constraint firstItem="SZI-wH-DJ9" firstAttribute="leading" secondItem="e34-Vk-Bn2" secondAttribute="leading" id="YM2-xN-eJq"/>
+                                    <constraint firstItem="y92-Nv-VDg" firstAttribute="leading" secondItem="e34-Vk-Bn2" secondAttribute="leading" id="bi2-7s-hBt"/>
+                                    <constraint firstAttribute="trailing" secondItem="SZI-wH-DJ9" secondAttribute="trailing" id="fun-k3-pMd"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ycg-U5-Dep" secondAttribute="trailing" id="hsH-wG-Byy"/>
+                                </constraints>
+                                <visibilityPriorities>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                </visibilityPriorities>
+                                <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                </customSpacing>
+                            </stackView>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="T0e-y6-jic">
+                                <rect key="frame" x="175" y="194" width="130" height="32"/>
+                                <buttonCell key="cell" type="push" title="Iniciar conexion" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="92e-BY-fLq">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="initConections:" target="XfG-lQ-9wD" id="prc-sT-1No"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="e34-Vk-Bn2" secondAttribute="trailing" constant="50" id="5AT-BS-AXe"/>
+                            <constraint firstItem="e34-Vk-Bn2" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="50" id="Kei-Ly-dWg"/>
+                            <constraint firstItem="e34-Vk-Bn2" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="LZn-gK-5nZ"/>
+                            <constraint firstItem="e34-Vk-Bn2" firstAttribute="top" secondItem="T0e-y6-jic" secondAttribute="bottom" constant="20" id="cK9-lK-4rY"/>
+                            <constraint firstItem="T0e-y6-jic" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="fgP-FS-VdQ"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imgStatusAdvance" destination="dmn-Pv-LN2" id="yob-oD-iQa"/>
+                        <outlet property="imgStatusIntermediate" destination="CdC-oQ-ifb" id="h9l-fn-hB0"/>
+                        <outlet property="imgStatusSimple" destination="PLG-bc-61K" id="oer-4P-zVY"/>
+                        <outlet property="lblAdvance" destination="kGS-fB-2lN" id="Nbp-T1-t5x"/>
+                        <outlet property="lblIntermediate" destination="MKL-dJ-jyR" id="EUd-ft-iE2"/>
+                        <outlet property="lblSimple" destination="giJ-f5-muM" id="yUx-dn-6Dh"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="655"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="NSStatusNone" width="16" height="16"/>
+    </resources>
 </document>
