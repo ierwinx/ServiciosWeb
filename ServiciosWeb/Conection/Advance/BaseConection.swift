@@ -60,7 +60,7 @@ enum MethodCon: String {
     case DELETE
 }
 
-struct EmptyObj: Encodable & Decodable {
+struct EmptyObj: Codable & Decodable {
     init() {
     }
 }
