@@ -4,7 +4,7 @@ class BaseConection {
     
     private static let ownError: NSError = NSError(domain: "BaseConection", code: -1, userInfo: nil)
     
-    public static func sendResponse<E: Codable, T: Decodable>(strUrl: String, method: MethodCon, arrHeardes: [HeadersCon]? = [], objBody: E, handler: @escaping (_ objResp: T?, NSError) -> ()) {
+    public static func sendResponse<E: Encodable, T: Decodable>(strUrl: String, method: MethodCon, arrHeardes: [HeadersCon]? = [], objBody: E, handler: @escaping (_ objResp: T?, NSError) -> ()) {
         
         guard let endpoint: URL = URL(string: strUrl) else {
             return
@@ -60,7 +60,7 @@ enum MethodCon: String {
     case DELETE
 }
 
-struct EmptyObj: Codable & Decodable {
+struct EmptyObj: Codable {
     init() {
     }
 }

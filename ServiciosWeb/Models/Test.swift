@@ -16,7 +16,7 @@ struct Persona: Codable {
     
 }
 
-struct Respuesta: Codable {
+struct Respuesta: Decodable {
     
     let metodo: String
     let salida: Bool
