@@ -8,7 +8,8 @@ class ViewController: NSViewController {
     @IBOutlet weak var imgStatusSimple: NSImageView!
     @IBOutlet weak var imgStatusIntermediate: NSImageView!
     @IBOutlet weak var imgStatusAdvance: NSImageView!
-
+    @IBOutlet weak var lblEstatusSSL: NSTextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -63,11 +64,25 @@ class ViewController: NSViewController {
             }
         }
     }
+    
+    private func sslPinningSecure() {
+        let sslpin = SSLPinningAdvance()
+        sslpin.sendResponse { [weak self] albums, error in
+            if error.code == 0 {
+                print(albums?[0].title ?? "sin titulo")
+                self?.lblEstatusSSL.stringValue = "Conexion: Segura"
+            } else {
+                self?.lblEstatusSSL.stringValue = "Conexion: Insegura"
+                print(error)
+            }
+        }
+    }
 
     @IBAction func initConections(_ sender: Any) {
         simple()
         intermediate()
         avanzado()
+        sslPinningSecure()
     }
     
 }

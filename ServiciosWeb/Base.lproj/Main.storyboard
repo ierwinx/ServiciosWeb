@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="18122"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21701"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -851,7 +852,7 @@
                                 </customSpacing>
                             </stackView>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="T0e-y6-jic">
-                                <rect key="frame" x="175" y="194" width="130" height="32"/>
+                                <rect key="frame" x="176" y="194" width="129" height="32"/>
                                 <buttonCell key="cell" type="push" title="Iniciar conexion" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="92e-BY-fLq">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -860,13 +861,24 @@
                                     <action selector="initConections:" target="XfG-lQ-9wD" id="prc-sT-1No"/>
                                 </connections>
                             </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="SOA-Ks-T1J">
+                                <rect key="frame" x="18" y="46" width="444" height="24"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Conexion: " id="w8K-26-SeM">
+                                    <font key="font" metaFont="system" size="20"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="e34-Vk-Bn2" secondAttribute="trailing" constant="50" id="5AT-BS-AXe"/>
+                            <constraint firstItem="SOA-Ks-T1J" firstAttribute="top" secondItem="e34-Vk-Bn2" secondAttribute="bottom" constant="20" id="JkV-kV-ECp"/>
                             <constraint firstItem="e34-Vk-Bn2" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="50" id="Kei-Ly-dWg"/>
+                            <constraint firstAttribute="trailing" secondItem="SOA-Ks-T1J" secondAttribute="trailing" constant="20" id="Kva-Y7-cgr"/>
                             <constraint firstItem="e34-Vk-Bn2" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="LZn-gK-5nZ"/>
                             <constraint firstItem="e34-Vk-Bn2" firstAttribute="top" secondItem="T0e-y6-jic" secondAttribute="bottom" constant="20" id="cK9-lK-4rY"/>
                             <constraint firstItem="T0e-y6-jic" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="fgP-FS-VdQ"/>
+                            <constraint firstItem="SOA-Ks-T1J" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="qXy-IU-mfp"/>
                         </constraints>
                     </view>
                     <connections>
@@ -874,6 +886,7 @@
                         <outlet property="imgStatusIntermediate" destination="CdC-oQ-ifb" id="h9l-fn-hB0"/>
                         <outlet property="imgStatusSimple" destination="PLG-bc-61K" id="oer-4P-zVY"/>
                         <outlet property="lblAdvance" destination="kGS-fB-2lN" id="Nbp-T1-t5x"/>
+                        <outlet property="lblEstatusSSL" destination="SOA-Ks-T1J" id="lWo-xB-0UA"/>
                         <outlet property="lblIntermediate" destination="MKL-dJ-jyR" id="EUd-ft-iE2"/>
                         <outlet property="lblSimple" destination="giJ-f5-muM" id="yUx-dn-6Dh"/>
                     </connections>

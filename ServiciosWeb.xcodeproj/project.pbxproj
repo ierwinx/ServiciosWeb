@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 53;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,8 @@
 		AA47D93126576D7E00F3A464 /* BaseConection.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA47D93026576D7E00F3A464 /* BaseConection.swift */; };
 		AA47D934265773AD00F3A464 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA47D933265773AD00F3A464 /* Album.swift */; };
 		AA5259E126588DD900CEC289 /* SimpleConection.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5259E026588DD900CEC289 /* SimpleConection.swift */; };
+		AA93019A2A953D5C00FFFC0A /* SSLPinningAdvance.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9301992A953D5C00FFFC0A /* SSLPinningAdvance.swift */; };
+		AA93019C2A95406F00FFFC0A /* typicode.com.cer in Resources */ = {isa = PBXBuildFile; fileRef = AA93019B2A95406F00FFFC0A /* typicode.com.cer */; };
 		AA94383A265999A7000E0365 /* IntermediateConection.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA943839265999A7000E0365 /* IntermediateConection.swift */; };
 		AA94383D26599CA9000E0365 /* PersonaRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA94383C26599CA9000E0365 /* PersonaRepository.swift */; };
 		AA94383F26599CD0000E0365 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA94383E26599CD0000E0365 /* Test.swift */; };
@@ -30,6 +32,8 @@
 		AA47D93026576D7E00F3A464 /* BaseConection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseConection.swift; sourceTree = "<group>"; };
 		AA47D933265773AD00F3A464 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		AA5259E026588DD900CEC289 /* SimpleConection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleConection.swift; sourceTree = "<group>"; };
+		AA9301992A953D5C00FFFC0A /* SSLPinningAdvance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSLPinningAdvance.swift; sourceTree = "<group>"; };
+		AA93019B2A95406F00FFFC0A /* typicode.com.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = typicode.com.cer; sourceTree = "<group>"; };
 		AA943839265999A7000E0365 /* IntermediateConection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntermediateConection.swift; sourceTree = "<group>"; };
 		AA94383C26599CA9000E0365 /* PersonaRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonaRepository.swift; sourceTree = "<group>"; };
 		AA94383E26599CD0000E0365 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
@@ -72,6 +76,7 @@
 				AA47D92426576CFE00F3A464 /* Assets.xcassets */,
 				AA47D92626576CFE00F3A464 /* Main.storyboard */,
 				AA47D92926576CFE00F3A464 /* Info.plist */,
+				AA93019B2A95406F00FFFC0A /* typicode.com.cer */,
 				AA47D92A26576CFE00F3A464 /* ServiciosWeb.entitlements */,
 			);
 			path = ServiciosWeb;
@@ -92,6 +97,7 @@
 				AA5259DD26588CCC00CEC289 /* Simple */,
 				AA5259DE26588CD300CEC289 /* Intermediate */,
 				AA5259DF26588D4E00CEC289 /* Advance */,
+				AA9301982A953D2700FFFC0A /* SSLPinning-Advance */,
 				AA94383B26599C74000E0365 /* Test */,
 			);
 			path = Conection;
@@ -119,6 +125,14 @@
 				AA47D93026576D7E00F3A464 /* BaseConection.swift */,
 			);
 			path = Advance;
+			sourceTree = "<group>";
+		};
+		AA9301982A953D2700FFFC0A /* SSLPinning-Advance */ = {
+			isa = PBXGroup;
+			children = (
+				AA9301992A953D5C00FFFC0A /* SSLPinningAdvance.swift */,
+			);
+			path = "SSLPinning-Advance";
 			sourceTree = "<group>";
 		};
 		AA94383B26599C74000E0365 /* Test */ = {
@@ -155,8 +169,9 @@
 		AA47D91526576CFD00F3A464 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1250;
-				LastUpgradeCheck = 1250;
+				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					AA47D91C26576CFD00F3A464 = {
 						CreatedOnToolsVersion = 12.5;
@@ -188,6 +203,7 @@
 			files = (
 				AA47D92526576CFE00F3A464 /* Assets.xcassets in Resources */,
 				AA47D92826576CFE00F3A464 /* Main.storyboard in Resources */,
+				AA93019C2A95406F00FFFC0A /* typicode.com.cer in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,6 +218,7 @@
 				AA47D92326576CFD00F3A464 /* ViewController.swift in Sources */,
 				AA47D93126576D7E00F3A464 /* BaseConection.swift in Sources */,
 				AA94383D26599CA9000E0365 /* PersonaRepository.swift in Sources */,
+				AA93019A2A953D5C00FFFC0A /* SSLPinningAdvance.swift in Sources */,
 				AA47D92126576CFD00F3A464 /* AppDelegate.swift in Sources */,
 				AA47D934265773AD00F3A464 /* Album.swift in Sources */,
 				AA5259E126588DD900CEC289 /* SimpleConection.swift in Sources */,
@@ -257,6 +274,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -318,6 +336,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -344,8 +363,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = ServiciosWeb/ServiciosWeb.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 9TPTHP2V2G;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = ServiciosWeb/Info.plist;
@@ -365,8 +386,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = ServiciosWeb/ServiciosWeb.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 9TPTHP2V2G;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = ServiciosWeb/Info.plist;
